@@ -1,10 +1,9 @@
-import Menu from '../Menu/Menu'
+import Menu from "../Menu/Menu";
 
 export default function Cabecalho() {
-    return (
-        <header>
-            <h1>Cabecalho</h1>
-            <Menu />
-        </header>
-    )
+  return (
+    <header className="bg-gray-800 text-white py-4">
+      <Menu />
+    </header>
+  );
 }
