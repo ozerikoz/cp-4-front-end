@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 
 const Calculo: React.FC = () => {
-  const [distance, setDistance] = useState<string>('');
+  const [distance, setDistance] = useState<string>(''); 
   const [force, setForce] = useState<string | null>(null);
 
   const calculateGravitationalForce = () => {
@@ -19,7 +19,6 @@ const Calculo: React.FC = () => {
 
     const F = (G * m1 * m2) / Math.pow(r, 2); // Fórmula de Newton
 
-    // Função para formatar o número
     const formatForce = (value: number) => {
       if (value >= 1e12) {
         return (value / 1e12).toFixed(2) + ' trilhões de Newtons';
@@ -49,7 +48,7 @@ const Calculo: React.FC = () => {
         para ilustrar como forças gravitacionais atuam entre dois corpos massivos, como a Terra e Vênus. A força é
         calculada pela fórmula:
       </p>
-      <pre className="bg-gray-100 p-2 rounded">
+      <pre className="bg-white text-black p-2 rounded">
         F = (G * m1 * m2) / r²
       </pre>
       <p className="text-lg mb-4">
@@ -77,7 +76,7 @@ const Calculo: React.FC = () => {
         type="text"
         value={distance}
         onChange={(e) => setDistance(e.target.value.replace(/^0+/, ''))}
-        className="border p-2 mb-4 w-full"
+        className="border p-2 mb-4 w-full text-black" // Adiciona a classe text-black aqui
         placeholder="Digite a distância em km"
       />
       <button onClick={calculateGravitationalForce} className="bg-blue-500 text-white p-2 rounded">
