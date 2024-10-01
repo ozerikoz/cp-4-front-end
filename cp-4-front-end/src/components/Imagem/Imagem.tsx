@@ -1,16 +1,10 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 type ImagemProps = {
-    url: string;
-}
+  src: string;
+  alt: string;
+};
 
-export default function Imagem({ url }: ImagemProps) {
-    return (
-        <Image
-            src={url}
-            alt="Imagem do dia da nasa"
-            width={500}
-            height={500}
-        />
-    )
+export default function Imagem({ src, alt }: ImagemProps) {
+  return <Image src={src} alt={alt} width={500} height={500} />;
 }
